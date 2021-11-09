@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SecondController!{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <div class="card-title">Antwoord</div>
+                </div>
+                <div class="card-body">
+                    <form action="{{ path('result_new') }}">
+                        Wil je met met mij een dagje Amsterdam voor je verjaardag? <h6   class="text-muted">
+                            Ik wou de nee knop niet klikbaar maken maar dat is niet zo netjes vondt ik.
+                        </h6>
+                        <div class="mb-3">
+                            <div class="form-label">Select</div>
+                            <select name="awnser" class="form-select">
+                                <option value="Ja">Ja</option>
+                                <option value="Nee">Nee</option>
+                            </select>
+                        </div>
+                        En waarom?
+                        <input type="text" class="form-control" name="reason">
+                        <button type="submit" class="btn btn-success mt-2">Stuur antwoord</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+
+{% endblock %}

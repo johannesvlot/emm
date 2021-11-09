@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Result{% endblock %}
+
+{% block body%}
+
+    {% if result.awnser == 'Ja' %}
+        <div class="card">
+            <div class="card-body">
+                <h1>YES!</h1>
+                We spreken elkaar wel over hoe en wat :)
+
+                <div class="text-muted">Dit was het je kan <a href="{{ path('app_logout') }}" class="btn btn-primary">Hier</a> klikken om uit te loggen</div>
+            </div>
+        </div>
+        {% else %}
+            <div class="card">
+                <div class="card-body">
+                    <h1>kut</h1>
+                    Geeft niet dan wordt het em niet 
+
+                    <div class="text-muted">Dit was het je kan <a href="{{ path('app_logout') }}" class="btn btn-primary">Hier</a> klikken om uit te loggen</div>
+                </div>
+            </div>
+    {% endif %}
+
+{% endblock %}

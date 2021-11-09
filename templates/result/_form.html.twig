@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+<div class="card mt-2">
+    <div class="card-body">
+        {{ form_start(form) }}
+        Wil je met met mij een dagje Amsterdam voor je verjaardag? <h6   class="text-muted">
+            Ik wou de nee knop niet klikbaar maken maar dat is niet zo netjes vondt ik.
+        </h6>
+        {{ form_row(form.awnser) }}
+        En waarom?
+        {{ form_row(form.reason) }}
+        <button class="btn btn-success mt-2">{{ button_label|default('Antwoord versturen') }}</button>
+        {{ form_end(form) }}
+    </div>
+
+</div>
+    </div></div>
+
